@@ -79,7 +79,7 @@ export default function Portfolio() {
               {d.liveLink !== "" ? (
                 <div className="linkContainer">
                   <LiveTv className="icon" />
-                  <a href={d.liveLink}>Live Demo</a>
+                  <a href={d.liveLink}target="_blank">Live Demo</a>
                 </div>
               ) : (
                 <></>
@@ -88,7 +88,7 @@ export default function Portfolio() {
               {d.githubLink !== "" ? (
                 <div className="linkContainer">
                   <GitHub className="icon" />
-                  <a href={d.githubLink}>Github Repo</a>
+                  <a href={d.githubLink} target="_blank">Github Repo</a>
                 </div>
               ) : (
                 <></>

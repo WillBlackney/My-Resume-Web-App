@@ -35,19 +35,26 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
           <div className="itemContainer">
             <CloudDownload className="icon" />
 
-            <a href={resumePDF}>My Resume</a>
+            <a href={resumePDF} target="_blank">
+              My Resume
+            </a>
           </div>
           <div className="itemContainer">
             <LinkedIn className="icon" />
 
-            <a href="https://www.linkedin.com/in/william-blackney-a4a4b878/">
+            <a
+              href="https://www.linkedin.com/in/william-blackney-a4a4b878/"
+              target="_blank"
+            >
               My LinkedIn
             </a>
           </div>
           <div className="itemContainer">
             <GitHub className="icon" />
 
-            <a href="https://github.com/WillBlackney">My Github</a>
+            <a href="https://github.com/WillBlackney" target="_blank">
+              My Github
+            </a>
           </div>
         </div>
         <div className="right">
