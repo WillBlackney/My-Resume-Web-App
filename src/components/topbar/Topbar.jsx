@@ -1,9 +1,21 @@
 import "./topbar.scss";
-import { Person, Mail, CloudDownload } from "@material-ui/icons";
+import {
+  Person,
+  Mail,
+  CloudDownload,
+  LinkedIn,
+  GitHub,
+} from "@material-ui/icons";
+import { saveAs } from "file-saver";
+import resumePDF from "../../assets/Will_Blackney_Resume_2022.pdf";
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
   const downloadResumePDF = () => {
     console.log("downloading resume...");
+    saveAs(
+      "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      "example.pdf"
+    );
   };
   return (
     <div className={"topbar " + (menuOpen && "active")}>
@@ -22,7 +34,20 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
           </div>
           <div className="itemContainer">
             <CloudDownload className="icon" />
-            <span onClick={downloadResumePDF}>Download My Resume</span>
+
+            <a href={resumePDF}>My Resume</a>
+          </div>
+          <div className="itemContainer">
+            <LinkedIn className="icon" />
+
+            <a href="https://www.linkedin.com/in/william-blackney-a4a4b878/">
+              My LinkedIn
+            </a>
+          </div>
+          <div className="itemContainer">
+            <GitHub className="icon" />
+
+            <a href="https://github.com/WillBlackney">My Github</a>
           </div>
         </div>
         <div className="right">
