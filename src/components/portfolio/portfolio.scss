@@ -9,8 +9,33 @@
   h1 {
     font-size: 50px;
 
-    @include mobile{
+    @include mobile {
       font-size: 20px;
+    }
+  }
+
+  .linkContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    @include mobile {
+      display: none;
+    }
+
+    .icon {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+
+    span {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    a {
+      font-size: 15px;
+      font-weight: 500;
     }
   }
 
@@ -20,7 +45,7 @@
     list-style: none;
     display: flex;
 
-    @include mobile{
+    @include mobile {
       margin: 10px 0;
       flex-wrap: wrap;
       justify-content: center;
@@ -30,11 +55,11 @@
   .container {
     width: 70%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     flex-wrap: wrap;
 
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
 
@@ -43,16 +68,16 @@
       height: 150px;
       border-radius: 20px;
       border: 1px solid rgb(240, 239, 239);
-      margin: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       position: relative;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
       cursor: pointer;
+      text-align: center;
 
-      @include mobile{
+      @include mobile {
         width: 130px;
         height: 100px;
       }
@@ -60,6 +85,7 @@
       h3 {
         position: absolute;
         font-size: 20px;
+        text-align: center;
       }
 
       img {
@@ -70,6 +96,7 @@
       }
 
       &:hover {
+        text-align: center;
         background-color: $mainColor;
         img {
           opacity: 0.2;

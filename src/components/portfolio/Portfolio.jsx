@@ -4,10 +4,19 @@ import "./portfolio.scss";
 import {
   featuredPortfolio,
   webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
-} from "../../data";
+  gamePortfolio,
+} from "../../projectsData";
+import {
+  CCard,
+  CCardBody,
+  CCardTitle,
+  CCardText,
+  CButton,
+  CCardImage,
+  CCardSubtitle,
+  CCardLink,
+} from "@coreui/react";
+import { GitHub, LiveTv } from "@material-ui/icons";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
@@ -36,7 +45,7 @@ export default function Portfolio() {
         setData(webPortfolio);
         break;
       case "game":
-        setData(mobilePortfolio);
+        setData(gamePortfolio);
         break;
       default:
         setData(featuredPortfolio);
@@ -46,6 +55,7 @@ export default function Portfolio() {
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
+
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -58,11 +68,45 @@ export default function Portfolio() {
       </ul>
       <div className="container">
         {data.map((d) => (
+          <CCard style={{ width: "20rem" }}>
+            <CCardBody>
+              <div className="item">
+                <img src={`assets/${d.img}.png`} alt="" />
+                <h3>{d.title}</h3>
+              </div>
+              <h4>{d.title} </h4>
+
+              {d.liveLink !== "" ? (
+                <div className="linkContainer">
+                  <LiveTv className="icon" />
+                  <a href={d.liveLink}>Live Demo</a>
+                </div>
+              ) : (
+                <></>
+              )}
+
+              {d.githubLink !== "" ? (
+                <div className="linkContainer">
+                  <GitHub className="icon" />
+                  <a href={d.githubLink}>Github Repo</a>
+                </div>
+              ) : (
+                <></>
+              )}
+            </CCardBody>
+          </CCard>
+        ))}
+
+        {/*
+        {data.map((d) => (
           <div className="item">
-            <img src={d.img} alt="" />
+            <img src={`assets/${d.img}.png`} alt="" />
             <h3>{d.title}</h3>
+            <span> Github Link</span>
+            <span> Live Link</span>
           </div>
         ))}
+        */}
       </div>
     </div>
   );
