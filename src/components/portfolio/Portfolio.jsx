@@ -19,19 +19,11 @@ export default function Portfolio() {
     },
     {
       id: "web",
-      title: "Web App",
+      title: "Web Apps",
     },
     {
-      id: "mobile",
-      title: "Mobile App",
-    },
-    {
-      id: "design",
-      title: "Design",
-    },
-    {
-      id: "content",
-      title: "Content",
+      id: "game",
+      title: "Games",
     },
   ];
 
@@ -43,15 +35,9 @@ export default function Portfolio() {
       case "web":
         setData(webPortfolio);
         break;
-      case "mobile":
+      case "game":
         setData(mobilePortfolio);
-        break;
-      case "design":
-        setData(designPortfolio);
-        break;
-      case "content":
-        setData(contentPortfolio);
-        break;
+        break;      
       default:
         setData(featuredPortfolio);
     }

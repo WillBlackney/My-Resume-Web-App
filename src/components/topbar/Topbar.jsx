@@ -1,25 +1,32 @@
 import "./topbar.scss";
-import { Person, Mail } from "@material-ui/icons";
+import { Person, Mail, CloudDownload } from "@material-ui/icons";
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
+  const downloadResumePDF = () => {
+    console.log("downloading resume...");
+  };
   return (
     <div className={"topbar " + (menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            genius.
+            William Blackney.
           </a>
           <div className="itemContainer">
             <Person className="icon" />
-            <span>+44 924 12 74</span>
+            <span>+45 51800027</span>
           </div>
           <div className="itemContainer">
             <Mail className="icon" />
-            <span>safak@genius.com</span>
+            <span>william.blackney@hotmail.com</span>
+          </div>
+          <div className="itemContainer">
+            <CloudDownload className="icon" />
+            <span onClick={downloadResumePDF}>Download My Resume</span>
           </div>
         </div>
         <div className="right">
-          <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
+          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>
