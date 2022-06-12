@@ -5,27 +5,27 @@ import {
   featuredPortfolio,
   webPortfolio,
   gamePortfolio,
+  allPortfolio,
 } from "../../projectsData";
 import {
   CCard,
   CCardBody,
-  CCardTitle,
-  CCardText,
-  CButton,
-  CCardImage,
-  CCardSubtitle,
-  CCardLink,
 } from "@coreui/react";
 import { GitHub, LiveTv } from "@material-ui/icons";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
-  const list = [
+  const list = [    
+    {
+      id: "all",
+      title: "All",
+    },
     {
       id: "featured",
       title: "Featured",
     },
+   
     {
       id: "web",
       title: "Web Apps",
@@ -38,6 +38,9 @@ export default function Portfolio() {
 
   useEffect(() => {
     switch (selected) {
+      case "all":
+        setData(allPortfolio);
+        break;
       case "featured":
         setData(featuredPortfolio);
         break;
@@ -67,8 +70,8 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        {data.map((d) => (
-          <CCard style={{ width: "20rem" }}>
+        {data.sort((a, b) => a.title.localeCompare(b.title)).map((d) => (
+          <CCard style={{ width: "20rem", marginBottom: '2rem' }}>
             <CCardBody>
               <div className="item">
                 <img src={`assets/${d.img}.png`} alt="" />
@@ -97,16 +100,6 @@ export default function Portfolio() {
           </CCard>
         ))}
 
-        {/*
-        {data.map((d) => (
-          <div className="item">
-            <img src={`assets/${d.img}.png`} alt="" />
-            <h3>{d.title}</h3>
-            <span> Github Link</span>
-            <span> Live Link</span>
-          </div>
-        ))}
-        */}
       </div>
     </div>
   );
