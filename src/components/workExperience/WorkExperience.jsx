@@ -8,7 +8,49 @@ function WorkExperience() {
       roleName: "Student QA Developer",
       dateRange: "Oct 2021 - Present",
       companyLogo: "assets/unity_logo.jfif",
-      desc: "- Creating games with ECS/DOTS in 4-6 week sprints with a team of student developers. \n - Reporting bugs and useability concerns to the relevant developers/teams within Unity. \n- Contributing sample projects and learning materials to the 'Learn DOTS' ecosystem at Unity",
+      desc: [
+        "- Creating games using ECS/DOTS with a team of student developers.",
+        "- Reporting bugs and useability concerns to the relevant developers/teams within Unity.",
+        "- Contributing sample projects and learning materials to the 'Learn DOTS' ecosystem at Unity",
+      ],
+    },
+    {
+      id: 2,
+      companyName: "Walor",
+      roleName: "Frontend Web Developer Intern",
+      dateRange: "Jan 2022 - April 2022",
+      companyLogo: "assets/walor_logo.jfif",
+      desc: [
+        "- Front end development with React + Typescript.",
+        "- Contributed to the companies flagship web app product.",
+        "- Testing and QA.",
+      ],
+    },
+    {
+      id: 3,
+      companyName: "Oticon Medical",
+      roleName: "Student Game Developer",
+      dateRange: "Jan 2021 - Oct 2021",
+      companyLogo: "assets/oticon_logo.jfif",
+      desc: [
+        "- Building mobile games with Unity for users with cochlear implants and hearing disabilities.",
+        "- Game design + project managment.",
+        "- Coaching and management of project interns",
+      ],
+    },
+
+    {
+      id: 4,
+      companyName: "Parkbird",
+      roleName: "Front Mobile + Web Developer",
+      dateRange: "July 2020 - November 2020",
+      companyLogo: "assets/parkbird_logo.jfif",
+      desc: [
+        "- Front end web development with React.",
+        "- Mobile development with React Native.",
+        "- Created the company's admin tool web app for managing bookings.",
+        "- Contributed to the company flag ship mobile app.",
+      ],
     },
   ];
   return (
@@ -24,29 +66,13 @@ function WorkExperience() {
               <div className="cardRightContent">
                 <h2 className="cardCompanyName">{d.companyName}</h2>
                 <h3 className="cardRoleTitle">{d.roleName}</h3>
-                <p>{d.dateRange}</p>
-                <textarea className="cardDescription">{d.desc}</textarea>
+                <p className="cardDateRange">{d.dateRange}</p>
+
+                {d.desc.map((item) => {
+                  return <p>{item}</p>;
+                })}
               </div>
             </div>
-            {/*
-          <div className={"card"}>
-            <div className="top">
-              <img src="assets/right-arrow.png" className="left" alt="" />
-              <img
-                className="user"
-                src={d.img}
-                alt=""
-              />
-              <img className="right" src={d.icon} alt="" />
-            </div>
-            <div className="center">
-              {d.desc}
-            </div>
-            <div className="bottom">
-              <h3>{d.name}</h3>
-              <h4>{d.title}</h4>
-            </div>
-          </div>*/}
           </>
         ))}
       </div>
