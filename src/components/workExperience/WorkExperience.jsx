@@ -6,7 +6,7 @@ function WorkExperience() {
       id: 1,
       companyName: "Unity Technologies",
       roleName: "Student QA Developer",
-      dateRange: "Oct 2021 - Present",
+      dateRange: "Oct 2021 - July 2022",
       companyLogo: "assets/unity_logo.jfif",
       desc: [
         "- Creating games using ECS/DOTS with a team of student developers.",

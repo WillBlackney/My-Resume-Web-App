@@ -7,16 +7,13 @@ import {
   gamePortfolio,
   allPortfolio,
 } from "../../projectsData";
-import {
-  CCard,
-  CCardBody,
-} from "@coreui/react";
+import { CCard, CCardBody } from "@coreui/react";
 import { GitHub, LiveTv } from "@material-ui/icons";
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState("all");
   const [data, setData] = useState([]);
-  const list = [    
+  const list = [
     {
       id: "all",
       title: "All",
@@ -25,7 +22,7 @@ export default function Portfolio() {
       id: "featured",
       title: "Featured",
     },
-   
+
     {
       id: "web",
       title: "Web Apps",
@@ -70,36 +67,41 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        {data.sort((a, b) => a.title.localeCompare(b.title)).map((d) => (
-          <CCard style={{ width: "20rem", marginBottom: '2rem' }}>
-            <CCardBody>
-              <div className="item">
-                <img src={`assets/${d.img}.png`} alt="" />
-                <h3>{d.title}</h3>
-              </div>
-              <h4>{d.title} </h4>
-
-              {d.liveLink !== "" ? (
-                <div className="linkContainer">
-                  <LiveTv className="icon" />
-                  <a href={d.liveLink}target="_blank">Live Demo</a>
+        {data
+          .sort((a, b) => a.title.localeCompare(b.title))
+          .map((d) => (
+            <CCard style={{ width: "20rem", marginBottom: "2rem" }}>
+              <CCardBody>
+                <div className="item">
+                  <img src={`assets/${d.img}.png`} alt="" />
+                  <h3>{d.title}</h3>
                 </div>
-              ) : (
-                <></>
-              )}
+                <h4>{d.title} </h4>
 
-              {d.githubLink !== "" ? (
-                <div className="linkContainer">
-                  <GitHub className="icon" />
-                  <a href={d.githubLink} target="_blank">Github Repo</a>
-                </div>
-              ) : (
-                <></>
-              )}
-            </CCardBody>
-          </CCard>
-        ))}
+                {d.liveLink !== "" ? (
+                  <div className="linkContainer">
+                    <LiveTv className="icon" />
+                    <a href={d.liveLink} target="_blank">
+                      Live Demo
+                    </a>
+                  </div>
+                ) : (
+                  <></>
+                )}
 
+                {d.githubLink !== "" ? (
+                  <div className="linkContainer">
+                    <GitHub className="icon" />
+                    <a href={d.githubLink} target="_blank">
+                      Github Repo
+                    </a>
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </CCardBody>
+            </CCard>
+          ))}
       </div>
     </div>
   );

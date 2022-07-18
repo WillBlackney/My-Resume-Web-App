@@ -33,7 +33,7 @@ export const allPortfolio = [
     id: 5,
     title: "Battle Brothers Tavern",
     img: "battle_brothers_1",
-    liveLink: "",
+    liveLink: "battlebrotherstavern.com",
     githubLink: "https://github.com/WillBlackney/Battle-Brothers-Community-App",
   },
   {
@@ -56,10 +56,10 @@ export const allPortfolio = [
 export const featuredPortfolio = [
   {
     id: 1,
-    title: "Amazon Clone",
-    img: "amazon_logo",
-    liveLink: "https://challenge-91043.web.app/",
-    githubLink: "https://github.com/WillBlackney/Amazon-Web-Shop-Clone",
+    title: "Battle Brothers Tavern",
+    img: "battle_brothers_1",
+    liveLink: "battlebrotherstavern.com",
+    githubLink: "https://github.com/WillBlackney/Battle-Brothers-Community-App",
   },
   {
     id: 2,
@@ -113,7 +113,7 @@ export const webPortfolio = [
     id: 5,
     title: "Battle Brothers Tavern",
     img: "battle_brothers_1",
-    liveLink: "",
+    liveLink: "battlebrotherstavern.com",
     githubLink: "https://github.com/WillBlackney/Battle-Brothers-Community-App",
   },
 ];
