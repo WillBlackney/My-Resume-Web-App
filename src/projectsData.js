@@ -33,7 +33,7 @@ export const allPortfolio = [
     id: 5,
     title: "Battle Brothers Tavern",
     img: "battle_brothers_1",
-    liveLink: "battlebrotherstavern.com",
+    liveLink: "https://www.battlebrotherstavern.com",
     githubLink: "https://github.com/WillBlackney/Battle-Brothers-Community-App",
   },
   {
@@ -58,7 +58,7 @@ export const featuredPortfolio = [
     id: 1,
     title: "Battle Brothers Tavern",
     img: "battle_brothers_1",
-    liveLink: "battlebrotherstavern.com",
+    liveLink: "https://www.battlebrotherstavern.com",
     githubLink: "https://github.com/WillBlackney/Battle-Brothers-Community-App",
   },
   {
@@ -113,7 +113,7 @@ export const webPortfolio = [
     id: 5,
     title: "Battle Brothers Tavern",
     img: "battle_brothers_1",
-    liveLink: "battlebrotherstavern.com",
+    liveLink: "https://www.battlebrotherstavern.com",
     githubLink: "https://github.com/WillBlackney/Battle-Brothers-Community-App",
   },
 ];
