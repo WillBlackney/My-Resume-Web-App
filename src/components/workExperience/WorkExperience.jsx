@@ -1,9 +1,10 @@
 import React from "react";
 import "./workExperience.scss";
+import sgiLogo from "../../assets/sgi_logo.png";
 function WorkExperience() {
   const data = [
     {
-      id: 5,
+      id: 1,
       companyName: "Serious Games Interactive",
       roleName: "Game Developer",
       dateRange: "Aug 2022 - Ongoing",
@@ -14,7 +15,7 @@ function WorkExperience() {
       ],
     },
     {
-      id: 1,
+      id: 2,
       companyName: "Unity Technologies",
       roleName: "Student QA Developer",
       dateRange: "Oct 2021 - July 2022",
@@ -26,7 +27,7 @@ function WorkExperience() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       companyName: "Walor",
       roleName: "Frontend Web Developer Intern",
       dateRange: "Jan 2022 - April 2022",
@@ -38,7 +39,7 @@ function WorkExperience() {
       ],
     },
     {
-      id: 3,
+      id: 4,
       companyName: "Oticon Medical",
       roleName: "Student Game Developer",
       dateRange: "Jan 2021 - Oct 2021",
@@ -51,7 +52,7 @@ function WorkExperience() {
     },
 
     {
-      id: 4,
+      id: 5,
       companyName: "Parkbird",
       roleName: "Front Mobile + Web Developer",
       dateRange: "July 2020 - November 2020",
@@ -68,24 +69,44 @@ function WorkExperience() {
     <div className="workExperience" id="workExperience">
       <h1>Work Experience</h1>
       <div className="container">
-        {data.map((d) => (
-          <>
-            <div className="card">
-              <div className="cardLeftContent">
-                <img src={d.companyLogo} className="companyLogo" alt=""></img>
-              </div>
-              <div className="cardRightContent">
-                <h2 className="cardCompanyName">{d.companyName}</h2>
-                <h3 className="cardRoleTitle">{d.roleName}</h3>
-                <p className="cardDateRange">{d.dateRange}</p>
-
-                {d.desc.map((item) => {
-                  return <p>{item}</p>;
-                })}
-              </div>
+        <>
+          <div className="card">
+            <div className="cardLeftContent">
+              <img src={sgiLogo} className="companyLogo" alt=""></img>
             </div>
-          </>
-        ))}
+            <div className="cardRightContent">
+              <h2 className="cardCompanyName">{data[0].companyName}</h2>
+              <h3 className="cardRoleTitle">{data[0].roleName}</h3>
+              <p className="cardDateRange">{data[0].dateRange}</p>
+
+              {data[0].desc.map((item) => {
+                return <p>{item}</p>;
+              })}
+            </div>
+          </div>
+        </>
+        {data.map((d) =>
+          d.id != 1 ? (
+            <>
+              <div className="card">
+                <div className="cardLeftContent">
+                  <img src={d.companyLogo} className="companyLogo" alt=""></img>
+                </div>
+                <div className="cardRightContent">
+                  <h2 className="cardCompanyName">{d.companyName}</h2>
+                  <h3 className="cardRoleTitle">{d.roleName}</h3>
+                  <p className="cardDateRange">{d.dateRange}</p>
+
+                  {d.desc.map((item) => {
+                    return <p>{item}</p>;
+                  })}
+                </div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )
+        )}
       </div>
     </div>
   );
