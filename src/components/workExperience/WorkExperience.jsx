@@ -3,6 +3,17 @@ import "./workExperience.scss";
 function WorkExperience() {
   const data = [
     {
+      id: 5,
+      companyName: "Serious Games Interactive",
+      roleName: "Game Developer",
+      dateRange: "Aug 2022 - Ongoing",
+      companyLogo: "assets/sgi_logo.jfif",
+      desc: [
+        "- Creating educational games with Unity for a wide variety of platforms and demographics.",
+        "- Builing front end web applications and games with React and Vue.js.",
+      ],
+    },
+    {
       id: 1,
       companyName: "Unity Technologies",
       roleName: "Student QA Developer",
