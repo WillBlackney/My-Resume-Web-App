@@ -68,7 +68,7 @@ export default function Portfolio() {
       </ul>
       <div className="container">
         {data
-          .sort((a, b) => a.title.localeCompare(b.title))
+          //.sort((a, b) => a.title.localeCompare(b.title))
           .map((d) => (
             <CCard style={{ width: "20rem", marginBottom: "2rem" }}>
               <CCardBody>
