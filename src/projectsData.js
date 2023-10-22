@@ -1,5 +1,12 @@
 export const allPortfolio = [
   {
+    id: 8,
+    title: "We Are Gladiators",
+    img: "WAG_Logo_Small",
+    liveLink: "https://store.steampowered.com/app/2242110/We_Are_Gladiators/",
+    githubLink:"",
+  },
+  {
     id: 1,
     title: "Amazon Clone",
     img: "amazon_logo",
@@ -54,6 +61,13 @@ export const allPortfolio = [
 ];
 
 export const featuredPortfolio = [
+  {
+    id: 4,
+    title: "We Are Gladiators",
+    img: "WAG_Logo_Small",
+    liveLink: "https://store.steampowered.com/app/2242110/We_Are_Gladiators/",
+    githubLink:"",
+  },
   {
     id: 1,
     title: "Battle Brothers Tavern",
@@ -119,6 +133,13 @@ export const webPortfolio = [
 ];
 
 export const gamePortfolio = [
+  {
+    id: 3,
+    title: "We Are Gladiators",
+    img: "WAG_Logo_Small",
+    liveLink: "https://store.steampowered.com/app/2242110/We_Are_Gladiators/",
+    githubLink:"",
+  },
   {
     id: 1,
     title: "Heroes of Herp Derp",
