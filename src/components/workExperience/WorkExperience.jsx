@@ -13,7 +13,7 @@ function WorkExperience() {
       desc: [
         "- Project manager and Unity developer of the company's flagship game: 'We Are Gladiators'.",
         "- Managing a team of employees and cofounders.",
-        "- Responsible forommunity management, accounting, business management, marketing, and logistics in true startup fashion.",
+        "- Responsible for community management, business management and marketing.",
       ],
     },
     {
@@ -23,7 +23,7 @@ function WorkExperience() {
       dateRange: "Aug 2022 - Ongoing",
       companyLogo: "assets/sgi_logo.jfif",
       desc: [
-        "- Creating educational games with Unity for a wide variety of platforms (PC, mobile, web, VR, etc) and demographics (children, migrants, vision and hearing impaired, elderly, etc).",
+        "- Creating educational games with Unity for a wide variety of platforms and demographics.",
         "- Builing front end web applications and games with React and Vue.js.",
       ],
     },
