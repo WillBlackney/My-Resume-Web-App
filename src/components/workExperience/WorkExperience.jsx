@@ -1,6 +1,7 @@
 import React from "react";
 import "./workExperience.scss";
 import sgiLogo from "../../assets/sgi_logo.png";
+import vrLogo from "../../assets/Viking_Roo_Logo_Square.png";
 function WorkExperience() {
   const data = [
     {
@@ -22,7 +23,7 @@ function WorkExperience() {
       dateRange: "Aug 2022 - Ongoing",
       companyLogo: "assets/sgi_logo.jfif",
       desc: [
-        "- Creating educational games with Unity for a wide variety of platforms and demographics.",
+        "- Creating educational games with Unity for a wide variety of platforms (PC, mobile, web, VR, etc) and demographics (children, migrants, vision and hearing impaired, elderly, etc).",
         "- Builing front end web applications and games with React and Vue.js.",
       ],
     },
@@ -77,6 +78,7 @@ function WorkExperience() {
       ],
     },
   ];
+
   return (
     <div className="workExperience" id="workExperience">
       <h1>Work Experience</h1>
@@ -84,7 +86,7 @@ function WorkExperience() {
         <>
           <div className="card">
             <div className="cardLeftContent">
-              <img src={sgiLogo} className="companyLogo" alt=""></img>
+              <img src={vrLogo} className="companyLogo" alt=""></img>
             </div>
             <div className="cardRightContent">
               <h2 className="cardCompanyName">{data[0].companyName}</h2>
@@ -97,8 +99,26 @@ function WorkExperience() {
             </div>
           </div>
         </>
+
+        <>
+          <div className="card">
+            <div className="cardLeftContent">
+              <img src={sgiLogo} className="companyLogo" alt=""></img>
+            </div>
+            <div className="cardRightContent">
+              <h2 className="cardCompanyName">{data[1].companyName}</h2>
+              <h3 className="cardRoleTitle">{data[1].roleName}</h3>
+              <p className="cardDateRange">{data[1].dateRange}</p>
+
+              {data[1].desc.map((item) => {
+                return <p>{item}</p>;
+              })}
+            </div>
+          </div>
+        </>
+
         {data.map((d) =>
-          d.id != 1 ? (
+          d.id != 1 && d.id != 2 ? (
             <>
               <div className="card">
                 <div className="cardLeftContent">
