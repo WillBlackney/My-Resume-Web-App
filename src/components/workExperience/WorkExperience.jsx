@@ -5,6 +5,18 @@ function WorkExperience() {
   const data = [
     {
       id: 1,
+      companyName: "Viking Roo",
+      roleName: "Founder + Leader Developer",
+      dateRange: "June 2023 - Ongoing",
+      companyLogo: "assets/Viking_Roo_Logo_Square.jfif",
+      desc: [
+        "- Project manager and Unity developer of the company's flagship game: 'We Are Gladiators'.",
+        "- Managing a team of employees and cofounders.",
+        "- Responsible forommunity management, accounting, business management, marketing, and logistics in true startup fashion.",
+      ],
+    },
+    {
+      id: 2,
       companyName: "Serious Games Interactive",
       roleName: "Game Developer",
       dateRange: "Aug 2022 - Ongoing",
@@ -15,7 +27,7 @@ function WorkExperience() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       companyName: "Unity Technologies",
       roleName: "Student QA Developer",
       dateRange: "Oct 2021 - July 2022",
@@ -27,7 +39,7 @@ function WorkExperience() {
       ],
     },
     {
-      id: 3,
+      id: 4,
       companyName: "Walor",
       roleName: "Frontend Web Developer Intern",
       dateRange: "Jan 2022 - April 2022",
@@ -39,7 +51,7 @@ function WorkExperience() {
       ],
     },
     {
-      id: 4,
+      id: 5,
       companyName: "Oticon Medical",
       roleName: "Student Game Developer",
       dateRange: "Jan 2021 - Oct 2021",
@@ -52,7 +64,7 @@ function WorkExperience() {
     },
 
     {
-      id: 5,
+      id: 6,
       companyName: "Parkbird",
       roleName: "Front Mobile + Web Developer",
       dateRange: "July 2020 - November 2020",
