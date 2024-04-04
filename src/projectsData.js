@@ -47,14 +47,14 @@ export const allPortfolio = [
     id: 6,
     title: "Heroes of Herp Derp",
     img: "heroes_of_herp_derp_1",
-    liveLink: "https://blackney-studios.itch.io/heroes-of-herp-derp",
+    liveLink: "https://vikingroo.itch.io/heroes-of-herp-derp",
     githubLink: "https://github.com/WillBlackney/Hereos-Of-Herp-Derp",
   },
   {
     id: 7,
     title: "Herp Derp's Plight",
     img: "cards",
-    liveLink: "https://blackney-studios.itch.io/herp-derps-plight",
+    liveLink: "https://vikingroo.itch.io/herp-derps-plight",
     githubLink:
       "https://github.com/WillBlackney/Herp-Derps-Plight-Source-Code-And-Project-Files",
   },
