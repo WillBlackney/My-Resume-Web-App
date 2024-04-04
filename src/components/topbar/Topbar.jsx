@@ -7,7 +7,7 @@ import {
   GitHub,
 } from "@material-ui/icons";
 import { saveAs } from "file-saver";
-import resumePDF from "../../assets/William_Blackney_Resume_2024_April.pdf";
+import resumePDF from "../../assets/William_Blackney_Resume_2024.pdf";
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
   const downloadResumePDF = () => {
