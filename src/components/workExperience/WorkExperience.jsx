@@ -5,18 +5,6 @@ import vrLogo from "../../assets/Viking_Roo_Logo_Square.png";
 function WorkExperience() {
   const data = [
     {
-      id: 1,
-      companyName: "Viking Roo",
-      roleName: "Founder + Leader Developer",
-      dateRange: "June 2023 - Ongoing",
-      companyLogo: "assets/Viking_Roo_Logo_Square.jfif",
-      desc: [
-        "- Project manager and Unity developer of the company's flagship game: 'We Are Gladiators'.",
-        "- Managing a team of employees and cofounders.",
-        "- Responsible for community management, business management and marketing.",
-      ],
-    },
-    {
       id: 2,
       companyName: "Serious Games Interactive",
       roleName: "Game Developer",
